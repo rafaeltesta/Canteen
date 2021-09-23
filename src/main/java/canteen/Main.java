@@ -26,7 +26,7 @@ public class Main {
         System.out.println("[3] - Grande");
         System.out.println("Digite a opcao de tamanho: ");
         mountDrink.selectSize(sc.nextInt());
-
+        
         System.out.println("SELECIONE UM ADICIONAL");
         System.out.println("[1] - Raspas de limao");
         System.out.println("[2] - Canela em po");

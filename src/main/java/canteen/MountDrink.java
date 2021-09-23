@@ -20,6 +20,8 @@ public class MountDrink {
     
     public void selectDrink(int op) {
         switch (op) {
+            case 0:
+                break;
             case 1:
                 coffee.mountCoffee();
                 valueDrink = coffee.getValue();
@@ -62,24 +64,31 @@ public class MountDrink {
             case 1:
                 zestLemon.mountZestLemon();
                 totalValue += zestLemon.getValue();
+                break;
             case 2:
                 cinnamonPowder.mountCinnamonPowder();
                 totalValue += cinnamonPowder.getValue();
+                break;
             case 3:
                 ninhoMilk.mountNinhoMilk();
                 totalValue += ninhoMilk.getValue();
+                break;
             case 4:
                 sourCreamIce.mountSourCreamIce();
                 totalValue += sourCreamIce.getValue();
+                break;
             case 5:
                 condensedMilk.mountCondensedMilk();
                 totalValue += condensedMilk.getValue();
+                break;
             case 6:
                 chocolatePowder.mountChocolatePowder();
                 totalValue += chocolatePowder.getValue();
+                break;
             case 7:
                 cookie.mountCookie();
                 totalValue += cookie.getValue();
+                break;
         }
     }
 
