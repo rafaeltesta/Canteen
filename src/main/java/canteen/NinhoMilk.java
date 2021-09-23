@@ -2,7 +2,7 @@ package canteen;
 
 public class NinhoMilk extends Additional{
     public void mountNinhoMilk() {
-        setName("Milk Chocolate");
-        setValue(0.75);
+        setName("Leite ninho (colher)");
+        setValue(1.40);
     }
 }

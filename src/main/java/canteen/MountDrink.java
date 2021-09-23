@@ -8,43 +8,39 @@ public class MountDrink {
     Coffee coffee = new Coffee();
     CoffeeMilk coffeeMilk = new CoffeeMilk();
     MilkChocolate milkChocolate = new MilkChocolate();
-
+    Mocha mocha = new Mocha();
+    EspressoPanna espressoPanna = new EspressoPanna();
+    ZestLemon zestLemon = new ZestLemon();
+    CinnamonPowder cinnamonPowder = new CinnamonPowder();
+    NinhoMilk ninhoMilk = new NinhoMilk();
+    SourCreamIce sourCreamIce = new SourCreamIce();
+    CondensedMilk condensedMilk = new CondensedMilk();
+    ChocolatePowder chocolatePowder = new ChocolatePowder();
+    Cookie cookie = new Cookie();
+    
     public void selectDrink(int op) {
         switch (op) {
             case 1:
                 coffee.mountCoffee();
+                valueDrink = coffee.getValue();
                 break;
             case 2:
                 coffeeMilk.mountCoffeeMilk();
+                valueDrink = coffeeMilk.getValue();
                 break;
             case 3:
                 milkChocolate.mountMilkChocolate();
+                valueDrink = milkChocolate.getValue();
                 break;
             case 4:
-                mountMocha();
+                mocha.mountMocha();
+                valueDrink = mocha.getValue();
                 break;
             case 5:
-                mountEspressoPanna();
+                espressoPanna.mountEspressoPanna();
+                valueDrink = espressoPanna.getValue();
                 break;
         }
-    }
-
- 
-
-    Mocha mocha = new Mocha();
-
-    public void mountMocha() {
-        mocha.setName("Mocha");
-        mocha.setValue(4.0);
-        valueDrink += 4.0;
-    }
-
-    EspressoPanna espressoPanna = new EspressoPanna();
-
-    public void mountEspressoPanna() {
-        espressoPanna.setName("Espresso Panna");
-        espressoPanna.setValue(4.5);
-        valueDrink += 4.5;
     }
 
     public void selectSize(int op) {
@@ -61,31 +57,29 @@ public class MountDrink {
         }
     }
 
-    ZestLemon zestLemon = new ZestLemon();
-
-    public void mountZestLemon() {
-        zestLemon.setName("Raspas de limao");
-        zestLemon.setValue(0.5);
-        totalValue += 0.5;
-    }
-
-    CinnamonPowder cinnamonPowder = new CinnamonPowder();
-
-    public void mountCinnamonPowder() {
-        zestLemon.setName("Canela em po");
-        zestLemon.setValue(0.75);
-        totalValue += 0.75;
-    }
-
-    NinhoMilk ninhoMilk = new NinhoMilk();
-
     public void selectAdditional(int op) {
         switch (op) {
             case 1:
-                mountZestLemon();
+                zestLemon.mountZestLemon();
+                totalValue += zestLemon.getValue();
             case 2:
+                cinnamonPowder.mountCinnamonPowder();
+                totalValue += cinnamonPowder.getValue();
+            case 3:
                 ninhoMilk.mountNinhoMilk();
                 totalValue += ninhoMilk.getValue();
+            case 4:
+                sourCreamIce.mountSourCreamIce();
+                totalValue += sourCreamIce.getValue();
+            case 5:
+                condensedMilk.mountCondensedMilk();
+                totalValue += condensedMilk.getValue();
+            case 6:
+                chocolatePowder.mountChocolatePowder();
+                totalValue += chocolatePowder.getValue();
+            case 7:
+                cookie.mountCookie();
+                totalValue += cookie.getValue();
         }
     }
 
