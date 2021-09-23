@@ -3,6 +3,7 @@ package canteen;
 import java.util.Scanner;
 
 public class MountDrink {
+
     private int op;
     private double totalValue;
     private double valueDrink;
@@ -64,7 +65,7 @@ public class MountDrink {
 
     public void selectAdditional() {
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.println("SELECIONE UM ADICIONAL");
         System.out.println("[0] - Sem adicional");
         System.out.println("[1] - Raspas de limao");
@@ -107,7 +108,7 @@ public class MountDrink {
                 break;
         }
     }
-    
+
     public void moreAdditional() {
         Scanner sc = new Scanner(System.in);
         while (validator == 1) {
@@ -118,8 +119,8 @@ public class MountDrink {
         }
 
     }
-    
-    private void validator(int op){
+
+    private void validator(int op) {
         switch (op) {
             case 1:
                 selectAdditional();
@@ -128,26 +129,9 @@ public class MountDrink {
                 validator -= 1;
                 break;
         }
-                
+
     }
 
-//        switch (op) {
-//            case 1:
-//                System.out.println("SELECIONE UM ADICIONAL");
-//                System.out.println("[0] - Sem adicional");
-//                System.out.println("[1] - Raspas de limao");
-//                System.out.println("[2] - Canela em po");
-//                System.out.println("[3] - Leite ninho (colher)");
-//                System.out.println("[4] - Gelo de creme de leite (Cubo)");
-//                System.out.println("[5] - Leite condensado (colher)");
-//                System.out.println("[6] - Chocolate em po(Colher)");
-//                System.out.println("[7] - Cookie (Unidade)");
-//                System.out.println("Digite a opcao do adicional: ");
-//                selectAdditional(sc.nextInt());
-//                break;
-//            case 2:
-//                break;
-//        }
     public double getTotalValue() {
         return totalValue;
     }
