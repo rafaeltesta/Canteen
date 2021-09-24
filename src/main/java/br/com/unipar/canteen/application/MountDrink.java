@@ -13,6 +13,7 @@ import br.com.unipar.canteen.drink.EspressoPanna;
 import br.com.unipar.canteen.drink.MilkChocolate;
 import br.com.unipar.canteen.drink.Mocha;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MountDrink {
 
@@ -20,6 +21,8 @@ public class MountDrink {
     private double totalValue;
     private double valueDrink;
     private int validator = 1;
+    private ArrayList<String> additional = new ArrayList();
+    private ArrayList<String> drink = new ArrayList();
 
     public void selectDrink(int op) {
         switch (op) {
@@ -29,26 +32,31 @@ public class MountDrink {
                 Coffee coffee = new Coffee();
                 coffee.mountCoffee();
                 valueDrink = coffee.getValue();
+                drink.add("Cafe");
                 break;
             case 2:
                 CoffeeMilk coffeeMilk = new CoffeeMilk();
                 coffeeMilk.mountCoffeeMilk();
                 valueDrink = coffeeMilk.getValue();
+                drink.add("Café com Leite");
                 break;
             case 3:
                 MilkChocolate milkChocolate = new MilkChocolate();
                 milkChocolate.mountMilkChocolate();
                 valueDrink = milkChocolate.getValue();
+                drink.add("Leite com Chocolate");
                 break;
             case 4:
                 Mocha mocha = new Mocha();
                 mocha.mountMocha();
                 valueDrink = mocha.getValue();
+                drink.add("Mocha");
                 break;
             case 5:
                 EspressoPanna espressoPanna = new EspressoPanna();
                 espressoPanna.mountEspressoPanna();
                 valueDrink = espressoPanna.getValue();
+                drink.add("Espresso Panna");
                 break;
         }
     }
@@ -86,36 +94,43 @@ public class MountDrink {
                 ZestLemon zestLemon = new ZestLemon();
                 zestLemon.mountZestLemon();
                 totalValue += zestLemon.getValue();
+                additional.add("Raspas de limao");
                 break;
             case 2:
                 CinnamonPowder cinnamonPowder = new CinnamonPowder();
                 cinnamonPowder.mountCinnamonPowder();
                 totalValue += cinnamonPowder.getValue();
+                additional.add("Canela em po");
                 break;
             case 3:
                 NinhoMilk ninhoMilk = new NinhoMilk();
                 ninhoMilk.mountNinhoMilk();
                 totalValue += ninhoMilk.getValue();
+                additional.add("Leite ninho (colher)");
                 break;
             case 4:
                 SourCreamIce sourCreamIce = new SourCreamIce();
                 sourCreamIce.mountSourCreamIce();
                 totalValue += sourCreamIce.getValue();
+                additional.add("Gelo de creme de leite (Cubo)");
                 break;
             case 5:
                 CondensedMilk condensedMilk = new CondensedMilk();
                 condensedMilk.mountCondensedMilk();
                 totalValue += condensedMilk.getValue();
+                additional.add("Leite condensado (colher)");
                 break;
             case 6:
                 ChocolatePowder chocolatePowder = new ChocolatePowder();
                 chocolatePowder.mountChocolatePowder();
                 totalValue += chocolatePowder.getValue();
+                additional.add("Chocolate em po(Colher)");
                 break;
             case 7:
                 Cookie cookie = new Cookie();
                 cookie.mountCookie();
                 totalValue += cookie.getValue();
+                additional.add("Cookie (Unidade)");
                 break;
         }
     }
@@ -145,6 +160,14 @@ public class MountDrink {
 
     public double getTotalValue() {
         return totalValue;
+    }
+
+    public ArrayList<String> getAdditional() {
+        return additional;
+    }
+
+    public ArrayList<String> getDrink() {
+        return drink;
     }
 
 }

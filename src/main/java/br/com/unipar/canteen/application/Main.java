@@ -28,13 +28,12 @@ public class Main {
         System.out.println("[3] - Grande");
         System.out.println("Digite a opcao de tamanho: ");
         mountDrink.selectSize(sc.nextInt());
-        
+
         mountDrink.moreAdditional();
-        
-        
-        
-        
-        System.out.println(mountDrink.getTotalValue());
+
+        System.out.println("O valor do pedido foi: " + mountDrink.getTotalValue());
+        System.out.println("A bebida pedida foi: " + mountDrink.getDrink());
+        System.out.println("O(s) adicional(is) pedidos foram: " + mountDrink.getAdditional());
 
         sc.close();
     }

@@ -1,6 +1,7 @@
 package br.com.unipar.canteen.additional;
 
 public class Additional {
+
     private String name;
     private double value;
 
