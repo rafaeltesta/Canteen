@@ -1,7 +1,5 @@
 package br.com.unipar.canteen.application;
 
-import br.com.unipar.canteen.drink.Drink;
-import br.com.unipar.canteen.drink.Coffee;
 import java.util.Scanner;
 
 public class Main {
@@ -9,8 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Drink drink = new Drink();
-        Coffee coffee = new Coffee();
         MountDrink mountDrink = new MountDrink();
 
         System.out.println("SELECIONE UMA BEBIDA: ");
